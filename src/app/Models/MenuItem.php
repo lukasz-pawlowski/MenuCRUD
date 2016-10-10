@@ -1,30 +1,30 @@
 <?php
 
-namespace Backpack\MenuCRUD\app\Models;
+namespace Overbackpack\MenuCRUD\app\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Backpack\CRUD\CrudTrait;
+use Overbackpack\CRUD\CrudTrait;
 
 class MenuItem extends Model
 {
     use CrudTrait;
 
     protected $table = 'menu_items';
-    protected $fillable = ['name', 'type', 'link', 'page_id', 'parent_id'];
+    protected $fillable = ['name', 'type', 'link', 'page_id', 'parent_id', 'active'];
 
     public function parent()
     {
-        return $this->belongsTo('Backpack\MenuCRUD\app\Models\MenuItem', 'parent_id');
+        return $this->belongsTo('Overbackpack\MenuCRUD\app\Models\MenuItem', 'parent_id');
     }
 
     public function children()
     {
-        return $this->hasMany('Backpack\MenuCRUD\app\Models\MenuItem', 'parent_id');
+        return $this->hasMany('Overbackpack\MenuCRUD\app\Models\MenuItem', 'parent_id');
     }
 
     public function page()
     {
-        return $this->belongsTo('Backpack\PageManager\app\Models\Page', 'page_id');
+        return $this->belongsTo('Overbackpack\PageManager\app\Models\Page', 'page_id');
     }
 
     /**
