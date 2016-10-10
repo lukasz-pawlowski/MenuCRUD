@@ -1,5 +1,5 @@
 {
-    "name": "backpack/menucrud",
+    "name": "overbackpack/menucrud",
     "type": "library",
     "description": "An admin panel for menu items, using Backpack\\CRUD on Laravel 5.",
     "keywords": [
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Backpack\\MenuCRUD\\": "src"
+            "Overbackpack\\MenuCRUD\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Backpack\\MenuCRUD\\": "tests"
+            "Overbackpack\\MenuCRUD\\": "tests"
         }
     },
     "scripts": {
