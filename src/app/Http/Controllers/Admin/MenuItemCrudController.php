@@ -52,6 +52,13 @@ class MenuItemCrudController extends CrudController
                                 'type' => 'page_or_link',
                                 'page_model' => '\Backpack\PageManager\app\Models\Page',
                             ]);
+        
+        $this->crud->addField([
+            'label' => 'Active?',
+            'name' => 'active',
+            'type' => 'select_from_array',
+            'options' => ['y' => 'Yes', 'n' => 'No']
+        ]);
     }
 
     public function store(StoreRequest $request)
