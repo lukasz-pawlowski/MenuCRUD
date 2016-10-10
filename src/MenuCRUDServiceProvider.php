@@ -1,6 +1,6 @@
 <?php
 
-namespace Backpack\MenuCRUD;
+namespace Overbackpack\MenuCRUD;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
@@ -33,7 +33,7 @@ class MenuCRUDServiceProvider extends ServiceProvider
      */
     public function setupRoutes(Router $router)
     {
-        $router->group(['namespace' => 'Backpack\MenuCRUD\app\Http\Controllers'], function ($router) {
+        $router->group(['namespace' => 'Overbackpack\MenuCRUD\app\Http\Controllers'], function ($router) {
             \Route::group(['prefix' => 'admin', 'middleware' => ['web', 'admin'], 'namespace' => 'Admin'], function () {
                 \CRUD::resource('menu-item', 'MenuItemCrudController');
             });
