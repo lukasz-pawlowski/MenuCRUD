@@ -5,8 +5,8 @@ namespace Backpack\MenuCRUD\app\Http\Controllers\Admin;
 use App\Http\Requests;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION: change the requests to match your own file names if you need form validation
-use Backpack\CRUD\app\Http\Requests\CrudRequest as StoreRequest;
-use Backpack\CRUD\app\Http\Requests\CrudRequest as UpdateRequest;
+use Overbackpack\CRUD\app\Http\Requests\CrudRequest as StoreRequest;
+use Overbackpack\CRUD\app\Http\Requests\CrudRequest as UpdateRequest;
 
 class MenuItemCrudController extends CrudController
 {
